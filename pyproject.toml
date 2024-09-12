@@ -10,6 +10,17 @@ readme = "README.md"
 python = "^3.12"
 django = "^5.1.1"
 
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-django = "^4.9.0"
+pytest-cov = "^5.0.0"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "devpro.settings"
+python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
 
 [build-system]
 requires = ["poetry-core"]
