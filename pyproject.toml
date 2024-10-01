@@ -20,7 +20,7 @@ pytest-cov = "^5.0.0"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "devpro.settings"
-python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
+python_files = ["test*","test_*.py", "*_test.py", "testing/python/*.py"]
 
 [build-system]
 requires = ["poetry-core"]
