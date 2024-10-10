@@ -5,6 +5,7 @@ description = "Projeto com código fonte do curso Django para Profisisonais da D
 authors = ["gustavodsantos <gustavojuniordos@hotmail.com>"]
 license = "MIT"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -19,20 +20,14 @@ pytest-django = "^4.9.0"
 pytest-cov = "^5.0.0"
 ruff = "^0.6.9"
 taskipy = "^1.13.0"
-isort = "^5.13.2"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "devpro.settings"
 python_files = ["test*","test_*.py", "*_test.py", "testing/python/*.py"]
 
-[tool.isort]
-profile = "black"
-known_third_party = ["django"]
-
 [tool.ruff]
 line-length=120
 exclude = ['./devpro/base/migrations']
-extend-select = ["I"]
 
 [tool.ruff.lint]
 select = ['I', 'F', 'E', 'W', 'PL', 'PT']
